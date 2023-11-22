@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - RPS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+
+  <body>
+    <!--  <audio id="backsound" autoplay="true" loop>
+      <source
+        src="/music/game-over-danijel-zambo-main-version-02-03-1394.mp3"
+        type="audio/mpeg"
+      />
+    </audio> -->
+    <div class="container">
+      <header id="webb">
+        <h2><a href="index.html">Rock Paper Scissors</a></h2>
+        <nav>
+          <ul id="webMenu">
+            <li><a href="about.html">about</a></li>
+            <li><a href="game.html">game</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <header id="mobile">
+        <nav class="site-nav">
+          <button
+            class="menu-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <span class="visually-hidden">Menu</span>
+            <div class="hamburger" aria-hidden="true"></div>
+          </button>
+
+          <ul
+            data-state="closed"
+            class="primary-navigation"
+            id="primary-navigation"
+          >
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="game.html">Game</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <h2 class="title">ABOUT</h2>
+        <div class="about">
+          <section class="information">
+            <h1>ABOUT US</h1>
+            <p>
+              <br />
+              We are three students on EC school in Stockholm, but we are
+              located in different places of Sweden. <br /><br />
+              - Sebastian lives in Stockholm and he says "smutt" alot.<br /><br />
+              - Linus lives in Kumla, but not the prison. He is the coder genius
+              in our epic group.<br /><br />
+              - Johanna is the northern person who has some expressions that the
+              rest of the group doesn't understand, <br />
+              ....but is perfectly logical expressions.<br /><br />
+              We as a group complement each other in a way that we push the
+              limits and try different solutions. <br />We learn from each other
+              and have discussions, ideas and coding skills. <br /><br />
+              SEJOLI AB is a company that values creativity, laughter, coding
+              skills and pushing for success. No idea is a bad idea.
+              <br /><br />Our motto is:
+              <strong>"It is just beepity baapity boopity"</strong>.
+            </p>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+        <div class="copyright">&copy; SEJOLI AB 2023</div>
+      </footer>
+    </div>
+    <script src="js/rps_api.js"></script>
+    <script src="js/about.js"></script>
+  </body>
+</html>

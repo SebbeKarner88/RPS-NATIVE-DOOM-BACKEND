@@ -1,0 +1,341 @@
+ 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background: url("../img/Front-page-2.webp") no-repeat center center fixed;
+  background-size: cover;
+  scroll-behavior: smooth;
+  
+}
+
+.container{
+  grid-area: main;
+  display: grid;
+  height: 90vh;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-areas:
+  'header header header'
+  'main main main'
+  'footer footer';
+  
+}
+
+
+.formen{
+  background-image: url(/img/theKassett.jpg);
+  border-radius: 10px;
+  height: 255px;
+  width: 370px;
+  justify-content: center;
+  grid-column: 1/8;
+  grid-row: 2/3;
+  justify-self: center ;
+  box-shadow: 0 0  6px 6px  rgba(3, 0, 0, 0.5);
+  
+}
+
+.knappar {
+  display: flex;
+  width:100%;
+  justify-content: space-around;
+}
+
+#username{
+  display: flex;
+  height: 30%;
+/*   width: 100%; */
+  padding: 5px;
+  margin-top: 10px;
+  background-color: transparent;
+  font-family: 'Permanent Marker', cursive;
+  border: transparent;
+  justify-content: center;
+  align-items: start;
+}
+
+#password{
+  display: flex;
+  background-color: transparent ;
+  padding: 5px;
+  margin-top: -6.2%;
+  font-family: 'Permanent Marker', cursive;
+  border: transparent;
+  justify-content: center;
+  align-items: start; 
+
+}
+
+#username:focus,
+#password:focus{
+  outline: transparent;
+  background-color: transparent;
+  font-family: 'Permanent Marker', cursive;
+  border: transparent;
+
+}
+
+::placeholder{
+  color: black;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.knappar button{
+  display: flex;
+  font-family: 'Permanent Marker', cursive;
+  background: transparent;
+  border: transparent;
+  color: rgb(22, 22, 22);
+  font-size: 20px;
+  border-radius: 5px;
+  justify-content: center ;
+  align-self: center;
+  margin-top: 19%;
+  display: inline-block;
+}
+
+.knappar button:hover{
+  color: deeppink;
+}
+
+
+
+header {
+  grid-area: header;
+   background-color: rgba(63, 60, 60, 0.15);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 5rem;
+  justify-content: space-between;
+  align-content: center;
+  border-bottom-color: rgba(249, 134, 220, 0.7);
+  border-bottom-style: double;
+}
+
+header h2,
+header a {
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  color: deeppink;
+  text-decoration: none;
+  padding: 1.4rem;
+  font-size: 1.6rem;
+}
+
+nav ul {
+  color: #0084ff;
+  list-style: none;
+  margin-right: 50px;
+}
+
+nav ul li {
+  display: inline;
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: deeppink;
+  padding: 1.4rem;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+
+li a:hover,
+a:hover {
+  color: blueviolet;
+  animation: swipe 0.6s infinite;
+}
+
+footer {
+  grid-area: footer;
+  border-top-color: rgba(249, 134, 220, 0.7);
+  border-top-style: double;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(3, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 5rem;
+}
+
+.copyright {
+  padding-top: 1.5rem;
+  float: left;
+  margin-left: 4rem;
+  font-family: "Orbitron", sans-serif;
+  color: fuchsia;
+}
+
+
+#mobile {
+  display: none;
+}
+
+.primary-navigation {
+  position: absolute;
+  top: 4rem;
+  left: 0%;
+  background-color: rgba(3, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  transition: clip-path ease-in-out 700ms;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.primary-navigation[data-state="opened"] {
+  animation: clipPathCircleOpen 750ms ease-in-out forwards;
+}
+
+.primary-navigation[data-state="closing"] {
+  animation: clipPathCircleClose 750ms ease-in-out forwards;
+}
+
+.primary-navigation[data-state="closed"] {
+  display: none;
+}
+
+@keyframes clipPathCircleOpen {
+  0% {
+    clip-path: circle(0% at top left);
+  }
+
+  100% {
+    clip-path: circle(250% at top left);
+  }
+}
+
+@keyframes clipPathCircleClose {
+  0% {
+    clip-path: circle(250% at top left);
+  }
+
+  100% {
+    clip-path: circle(0% at top left);
+  }
+}
+
+.site-nav li {
+  border-bottom-color: rgba(249, 134, 220, 0.7);
+  border-bottom-style: double;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+.site-nav a {
+  color: #ebebd3;
+  display: block;
+  padding: 2em 4em 2em 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #e4b363;
+  color: #464655;
+}
+
+.title {
+  margin-right: 2rem;
+  text-transform: uppercase;
+}
+
+.menu-toggle {
+  padding: 1em;
+  background: transparent;
+  border: 0;
+  position: absolute;
+  top: 1.25rem;
+  left: 0.5rem;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  background: deeppink;
+  height: 3px;
+  width: 1.75rem;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+[aria-expanded="true"] .hamburger {
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+[aria-expanded="true"] .hamburger::before {
+  opacity: 0;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media screen and (max-width: 920px) {
+  #webb {
+    display: none;
+  }
+
+  #mobile {
+    display: block;
+    z-index: 999;
+  }
+}
+
+@media screen and (max-width: 600px){
+
+  body{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container{
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+    justify-content: center;
+  }
+
+  .formen img{
+    width: 70%;
+  }
+ 
+}

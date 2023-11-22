@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/gameboard.css" />
+
+    <title>vs Computer - RPS</title>
+  </head>
+  <body>
+    <!--    <audio id="backsound" autoplay="true" loop>
+      <source
+        src="/music/neon-signs-simon-folwar-main-version-02-40-20184.mp3"
+        type="audio/mpeg"
+      />
+    </audio> -->
+    <section class="container">
+      <header>
+        <div id="reloadButton" class="none">
+          <h2>
+            <a href="" class="reload" onclick="reloadGame()">Replay</a>
+          </h2>
+        </div>
+        <section class="exit">
+          <div class="exitbox">
+            <h2><a href="game.html">EXIT</a></h2>
+          </div>
+        </section>
+      </header>
+      <main>
+        <div class="opponentbox">
+          <h2>COMPUTER</h2>
+        </div>
+        <section id="resultCard">
+          <div>
+            <img
+              id="oppCard"
+              class="oppCard"
+              src="img/card_back.png"
+              alt="Computer Card"
+            />
+          </div>
+        </section>
+
+        <span id="result">
+          <div class="timebox">
+            <h3>TIME</h3>
+            <h3 id="time">00:30</h3>
+          </div>
+        </span>
+
+        <section class="rpscards">
+          <div>
+            <img
+              id="rock"
+              class="rock"
+              src="img/Rock_pic.png"
+              alt="Rock picture"
+              onclick="flip('rock')"
+            />
+          </div>
+          <div>
+            <img
+              id="paper"
+              class="paper"
+              src="img/paper_pic.png"
+              alt="Paper picture"
+              onclick="flip('paper')"
+            />
+          </div>
+          <div>
+            <img
+              id="scissor"
+              class="scissor"
+              src="img/scissors_pic.png"
+              alt="Sicssor picture"
+              onclick="flip('scissor')"
+            />
+          </div>
+        </section>
+
+        <section class="user">
+          <div class="userbox">
+            <h2 id="player">PLAYER</h2>
+          </div>
+        </section>
+      </main>
+
+      <!-- <footer></footer> -->
+    </section>
+    <script src="js/rps_api.js"></script>
+    <script src="js/gameboardCPU.js"></script>
+  </body>
+</html>

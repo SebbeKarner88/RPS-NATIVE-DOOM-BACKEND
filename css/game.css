@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../img/80s_background.webp") no-repeat center center fixed;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 5rem auto 5rem;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+header {
+  background-color: rgba(63, 60, 60, 0.15);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 5rem;
+  justify-content: space-between;
+  align-content: center;
+  border-bottom-color: rgba(249, 134, 220, 0.7);
+  border-bottom-style: double;
+  z-index: 999;
+}
+
+header h2,
+header a {
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  color: deeppink;
+  text-decoration: none;
+  padding: 1.4rem;
+  font-size: 1.6rem;
+}
+
+nav ul {
+  color: #0084ff;
+  list-style: none;
+  margin-right: 50px;
+}
+
+nav ul li {
+  display: inline;
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: deeppink;
+  padding: 1.4rem;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+li a:hover,
+a:hover {
+  color: blueviolet;
+  animation: swipe 0.6s infinite;
+}
+
+@keyframes swipe {
+  0% {
+    color: deeppink;
+  }
+  50% {
+    color: blueviolet;
+  }
+  100% {
+    color: deeppink;
+  }
+}
+
+footer {
+  grid-area: footer;
+  border-top-color: rgba(249, 134, 220, 0.7);
+  border-top-style: double;
+  background-color: rgba(3, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 5rem;
+}
+
+.copyright {
+  padding-top: 1.5rem;
+  float: left;
+  margin-left: 4rem;
+  font-family: "Orbitron", sans-serif;
+  color: fuchsia;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  width: 1024px;
+  padding-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: rgba(3, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+}
+
+main h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  color: #42e6fe;
+  letter-spacing: 0.25rem;
+  -webkit-text-stroke: 1px black;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.createGame {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  color: rgb(255, 53, 204);
+}
+
+.createGame p {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  background-color: rgba(3, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-color: rgba(249, 134, 220, 0.7);
+  border-style: double;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.createGame h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  color: #42e6fe;
+  letter-spacing: 0.25rem;
+  -webkit-text-stroke: 1px black;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.createGame ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  letter-spacing: 0.25rem;
+  -webkit-text-stroke: 1px limegreen;
+}
+
+.createGame ul li a {
+  color: deeppink;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+
+.games {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 4rem;
+}
+
+.games h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  color: #42e6fe;
+  letter-spacing: 0.25rem;
+  -webkit-text-stroke: 1px black;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gameCards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  height: 100px;
+  width: 21%;
+  border-radius: 1.4rem;
+  background-color: rgba(3, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-color: rgba(249, 134, 220, 0.7);
+  border-style: double;
+  box-shadow: 0 0 10px 3px #333;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card li {
+  padding: 0.4rem;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  color: deeppink;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: larger;
+}
+
+.btn {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.btnPink {
+  border-color: deeppink;
+  color: deeppink;
+  font-family: "Orbitron", sans-serif;
+}
+
+.btnPink:hover {
+  background: deeppink;
+  color: white;
+}
+
+#mobile {
+  display: none;
+}
+
+.primary-navigation {
+  position: absolute;
+  top: 4rem;
+  left: 0%;
+  background-color: rgba(3, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  transition: clip-path ease-in-out 700ms;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.primary-navigation[data-state="opened"] {
+  animation: clipPathCircleOpen 750ms ease-in-out forwards;
+}
+
+.primary-navigation[data-state="closing"] {
+  animation: clipPathCircleClose 750ms ease-in-out forwards;
+}
+
+.primary-navigation[data-state="closed"] {
+  display: none;
+}
+
+@keyframes clipPathCircleOpen {
+  0% {
+    clip-path: circle(0% at top left);
+  }
+
+  100% {
+    clip-path: circle(250% at top left);
+  }
+}
+
+@keyframes clipPathCircleClose {
+  0% {
+    clip-path: circle(250% at top left);
+  }
+
+  100% {
+    clip-path: circle(0% at top left);
+  }
+}
+
+.site-nav li {
+  border-bottom-color: rgba(249, 134, 220, 0.7);
+  border-bottom-style: double;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+.site-nav a {
+  color: #ebebd3;
+  display: block;
+  padding: 2em 4em 2em 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #e4b363;
+  color: #464655;
+}
+
+.title {
+  margin-right: 2rem;
+  text-transform: uppercase;
+}
+
+.none-event {
+  pointer-events: none;
+}
+
+#Multiplayer .tooltiptext {
+  visibility: hidden;
+  width: 420px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  left: -25%;
+  z-index: 1;
+}
+
+#Multiplayer:hover .tooltiptext {
+  visibility: visible;
+}
+
+#Multiplayer .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.menu-toggle {
+  padding: 1em;
+  background: transparent;
+  border: 0;
+  position: absolute;
+  top: 1.25rem;
+  left: 0.5rem;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  background: deeppink;
+  height: 3px;
+  width: 1.75rem;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+[aria-expanded="true"] .hamburger {
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+[aria-expanded="true"] .hamburger::before {
+  opacity: 0;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.rock {
+  border-color: rgba(249, 134, 220, 0.7);
+  border-style: double;
+  border-radius: 10px;
+  background-color: rgba(3, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+.paper {
+  border-color: rgb(78, 208, 246);
+  border-style: double;
+  border-radius: 10px;
+  background-color: rgba(3, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.scissor {
+  border-color: rgb(242, 235, 90);
+  border-radius: 10px;
+  border-style: double;
+  background-color: rgba(3, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.none {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  #webb {
+    display: none;
+  }
+
+  #mobile {
+    display: block;
+    z-index: 999;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  .container {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  header {
+    display: inherit;
+  }
+
+  #gameCards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card {
+    width: 70%;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  .createGame ul {
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  .createGame ul li {
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+  }
+}

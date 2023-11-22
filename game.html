@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game</title>
+
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/game.css" />
+  <!-- font links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Playfair+Display:ital@1&display=swap"
+          rel="stylesheet"
+  />
+</head>
+<body>
+<audio id="backsound" autoplay="true" loop>
+  <source
+          src="/music/under-the-bridge-trinity-main-version-02-23-8576.mp3"
+          type="audio/mpeg"
+  />
+</audio>
+<div class="container">
+  <header id="webb">
+    <h2><a href="index.html">Rock Paper Scissors</a></h2>
+    <nav>
+      <ul id="webMenu">
+        <li><a href="about.html">about</a></li>
+        <li><a href="game.html">game</a></li>
+      </ul>
+    </nav>
+  </header>
+  <header id="mobile">
+    <nav class="site-nav">
+      <button
+              class="menu-toggle"
+              aria-controls="primary-navigation"
+              aria-expanded="false"
+      >
+        <span class="visually-hidden">Menu</span>
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <ul
+              data-state="closed"
+              class="primary-navigation"
+              id="primary-navigation"
+      >
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="game.html">Game</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Games</h1>
+    <section class="createGame">
+      <p>
+        RULES: <br /><br />
+        Rock-Paper-Scissors is a game played to settle disputes between two
+        people.
+        <br />
+        The game is played with three possible hand signals that represent a
+        rock, paper, and scissors.
+        <br /><br />| &gt; ROCK beats SCISSORS &lt; | | &gt; SCISSORS beats
+        PAPER &lt; | | &gt; PAPER beats ROCK &lt; |
+      </p>
+      <h2>Create game</h2>
+      <ul>
+        <li>
+          <a class="scissor" href="gameboardCPU.html">Singleplayer</a>
+        </li>
+        <li>
+          <a id="Multiplayer" href="#" class="scissor" onclick="createGame()"
+          >Multiplayer<span id="spanMulti" class="tooltiptext none"
+          >You need to log in</span
+          >
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="games">
+      <h2>Open games</h2>
+      <div id="gameCards"></div>
+    </section>
+  </main>
+  <footer><div class="copyright">&copy; SEJOLI AB 2023</div></footer>
+</div>
+<script src="js/rps_api.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

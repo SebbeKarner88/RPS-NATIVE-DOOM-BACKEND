@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../img/80s_background.webp") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 70px 120px auto 70px;
+  grid-template-areas:
+    "Header"
+    "Main"
+    "Main"
+    "Main";
+  min-height: 100vh;
+}
+
+.opponentbox {
+  margin: 0.5rem;
+  color: #f69d20;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 40px #ff0000;
+  backdrop-filter: blur(2px);
+  border-radius: 15px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.exitbox, .reloadButton {
+  margin-right: 1.1rem;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  border: 2px double #d009ae;
+  background-color: #171717;
+  border-radius: 7px;
+  padding: 5px;
+  display: inline-flex;
+}
+
+.exitbox a, .reloadButton a{
+  text-decoration: none;
+  color: #d009ae;
+}
+
+.exitbox a:hover, .reloadButton a:hover {
+  animation: swipe 0.6s infinite;
+}
+
+@keyframes swipe {
+  0% {
+    color: deeppink;
+  }
+  50% {
+    color: blueviolet;
+  }
+  100% {
+    color: deeppink;
+  }
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timebox {
+  color: #f69d20;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.8em;
+  background-color: #000001;
+  border-color: #f69d20;
+  border-style: double;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+.none {
+  display: none;
+}
+
+main {
+  grid-area: Main;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.rpscards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.rpscards img:hover {
+  transform:translateY(-20px);
+  filter:drop-shadow(15px 15px 30px) brightness(140%);
+  transition: 0.5s ease-out;
+}
+
+
+.rock {
+  height: 300px;
+  border-color: rgba(249, 134, 220, 0.7);
+  border-style: double;
+  border-radius: 20px;
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.68);
+}
+.paper {
+  height: 300px;
+  border-color: rgb(78, 208, 246);
+  border-style: double;
+  border-radius: 20px;
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.68);
+}
+
+
+.scissor {
+  height: 300px;
+  border-color: rgb(242, 235, 90);
+  border-radius: 20px;
+  border-style: double;
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.68);
+}
+
+.user {
+  display: flex;
+  grid-area: Footer;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultBanner {
+  color: #f69d20;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.5rem;
+  background-color: #000001;
+  border-top: 7px double #f69d20;
+  border-bottom: 7px double #f69d20;
+  padding: 10px;
+}
+
+.userbox {
+  margin: 0.5rem;
+  color: #f69d20;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.6em;
+  text-shadow: 1px 1px 40px #ff0000;
+  backdrop-filter: blur(2px);
+  border-radius: 15px;
+  padding: 3px;
+}
+
+@media screen and (max-width: 600px) {
+
+  body {
+    background-size: cover;
+  }
+
+  .opponentbox {
+    font-size: 1.5em;
+  }
+
+  .exitbox {
+    margin-top: 0;
+  }
+
+  .timebox {
+    font-size: 1.5em;
+  }
+
+  .rock {
+    height: 170px;
+  }
+
+  .paper {
+    height: 170px;
+  }
+
+
+  .scissor {
+    height: 170px;
+  }
+
+  .userbox {
+    font-size: 1.5em;
+  }
+}
+
+.treD {
+  animation: treD 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes treD {
+  0% {
+    transform: rotate(0deg);
+    transition-delay: 1s; 
+  } 
+  100% {
+    transform: rotateY(180deg) scaleX(-1);
+    transition-delay: 0.5s;
+  }
+}
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+header {
+  display: flex;
+  width: 100vw;
+  grid-area: Header;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#resultCard {
+  display: flex;
+  justify-content: center;
+}
+
+.treDC {
+  animation: treD 2s;
+  animation-fill-mode: forwards;
+}
+
+.oppCard {
+  height: 300px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border-style: double;
+  box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.68);
+}
